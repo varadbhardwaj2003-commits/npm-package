@@ -1,6 +1,6 @@
 {
   "name": "@varad123/student-toolkit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Production-ready utility library for college students to calculate attendance, required classes, percentage, SGPA, and CGPA.",
   "type": "module",
   "main": "./src/index.js",
