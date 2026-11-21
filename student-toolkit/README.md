@@ -1,4 +1,4 @@
-# student-toolkit
+# @varad123/student-toolkit
 
 A lightweight, zero-dependency, production-grade JavaScript utility library designed for college and university students. Easily calculate attendance metrics, required upcoming classes, examination percentages, Semester Grade Point Average (SGPA), and Cumulative Grade Point Average (CGPA).
 
@@ -15,7 +15,7 @@ Built with modern ES Modules, full input validation, predictable floating-point 
 - **CGPA Calculator**: Compute multi-semester Cumulative Grade Point Average with support for credit-weighted and unweighted averages.
 - **Zero Runtime Dependencies**: Ultra-lightweight footprint with zero external dependencies.
 - **Robust Error Handling**: Throws clear `TypeError` and `RangeError` messages on invalid inputs.
-- **Tree Shakeable**: Import the complete library or individual subpaths (`student-toolkit/attendance`, etc.).
+- **Tree Shakeable**: Import the complete library or individual subpaths (`@varad123/student-toolkit/attendance`, etc.).
 
 ---
 
@@ -24,15 +24,15 @@ Built with modern ES Modules, full input validation, predictable floating-point 
 Install using npm:
 
 ```bash
-npm install student-toolkit
+npm install @varad123/student-toolkit
 ```
 
 Or using yarn / pnpm:
 
 ```bash
-yarn add student-toolkit
+yarn add @varad123/student-toolkit
 # or
-pnpm add student-toolkit
+pnpm add @varad123/student-toolkit
 ```
 
 ---
@@ -49,13 +49,13 @@ import {
   calculatePercentage,
   calculateSGPA,
   calculateCGPA
-} from 'student-toolkit';
+} from '@varad123/student-toolkit';
 
 // Or individual subpath imports (tree-shaking optimized)
-import { calculateAttendance, requiredClasses } from 'student-toolkit/attendance';
-import { calculatePercentage } from 'student-toolkit/percentage';
-import { calculateSGPA } from 'student-toolkit/sgpa';
-import { calculateCGPA } from 'student-toolkit/cgpa';
+import { calculateAttendance, requiredClasses } from '@varad123/student-toolkit/attendance';
+import { calculatePercentage } from '@varad123/student-toolkit/percentage';
+import { calculateSGPA } from '@varad123/student-toolkit/sgpa';
+import { calculateCGPA } from '@varad123/student-toolkit/cgpa';
 ```
 
 ---
@@ -67,7 +67,7 @@ import { calculateCGPA } from 'student-toolkit/cgpa';
 Calculates current attendance percentage.
 
 ```javascript
-import { calculateAttendance } from 'student-toolkit';
+import { calculateAttendance } from '@varad123/student-toolkit';
 
 // 38 attended out of 48 total classes
 const attendance = calculateAttendance(38, 48);
@@ -85,7 +85,7 @@ console.log(calculateAttendance(22, 33, 4)); // 66.6667
 Calculates how many consecutive upcoming classes a student must attend to reach or exceed a target percentage.
 
 ```javascript
-import { requiredClasses } from 'student-toolkit';
+import { requiredClasses } from '@varad123/student-toolkit';
 
 // Currently attended 30 out of 50 classes (60%). Target is 75%:
 const needed = requiredClasses(30, 50, 75);
@@ -107,7 +107,7 @@ console.log(requiredClasses(19, 20, 100)); // Infinity (impossible)
 Calculates score percentage with validation.
 
 ```javascript
-import { calculatePercentage } from 'student-toolkit';
+import { calculatePercentage } from '@varad123/student-toolkit';
 
 const score = calculatePercentage(462, 500);
 console.log(score); // 92.4
@@ -130,7 +130,7 @@ Calculates weighted SGPA using each subject's credit weight and earned grade poi
 Formula: `SGPA = Σ(credits * gradePoint) / Σ(credits)`
 
 ```javascript
-import { calculateSGPA } from 'student-toolkit';
+import { calculateSGPA } from '@varad123/student-toolkit';
 
 const subjects = [
   { credits: 4, gradePoint: 9 },  // e.g. Data Structures (Grade A+)
@@ -153,7 +153,7 @@ Calculates overall CGPA across multiple semesters.
 **Mode A: Credit-Weighted (Recommended for universities where semester credit loads vary)**
 
 ```javascript
-import { calculateCGPA } from 'student-toolkit';
+import { calculateCGPA } from '@varad123/student-toolkit';
 
 const semesterHistory = [
   { sgpa: 8.5, credits: 20 },
@@ -168,7 +168,7 @@ console.log(cgpa); // 8.53
 **Mode B: Simple Unweighted Average**
 
 ```javascript
-import { calculateCGPA } from 'student-toolkit';
+import { calculateCGPA } from '@varad123/student-toolkit';
 
 // Array of semester SGPAs
 const cgpa = calculateCGPA([8.5, 9.0, 8.0]);

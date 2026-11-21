@@ -1,6 +1,6 @@
 # npm-package
 
-This repository contains **`student-toolkit`**, a production-quality, beginner-friendly JavaScript npm package for college students to calculate attendance, required classes, examination percentage, SGPA, and CGPA.
+This repository contains **`@varad123/student-toolkit`**, a production-quality, beginner-friendly JavaScript npm package for college students to calculate attendance, required classes, examination percentage, SGPA, and CGPA.
 
 ## Project Structure
 
