@@ -1,0 +1,45 @@
+{
+  "name": "student-toolkit",
+  "version": "1.0.0",
+  "description": "Production-ready utility library for college students to calculate attendance, required classes, percentage, SGPA, and CGPA.",
+  "type": "module",
+  "main": "./src/index.js",
+  "module": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./attendance": "./src/attendance.js",
+    "./percentage": "./src/percentage.js",
+    "./sgpa": "./src/sgpa.js",
+    "./cgpa": "./src/cgpa.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "example": "node examples/usage.js"
+  },
+  "keywords": [
+    "student",
+    "academic",
+    "college",
+    "attendance",
+    "btech",
+    "sgpa",
+    "cgpa",
+    "calculator",
+    "percentage",
+    "toolkit"
+  ],
+  "author": "Student Developer",
+  "license": "MIT",
+  "devDependencies": {
+    "vitest": "^3.0.7"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
